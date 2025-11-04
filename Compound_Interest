@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  
+    int P_int, R_int, T_int;
+
+    if (scanf("%d %d %d", &P_int, &R_int, &T_int) != 3) {
+        return 1; // Input error
+    }
+
+    // Convert integer inputs to double for accurate calculation
+    double P = (double)P_int;
+    double R = (double)R_int;
+    double T = (double)T_int;
+
+    double rate_factor = 1.0 + (R / 100.0);
+
+    double CI = Amount - P;
+
+    printf("%.2f\n", CI);
+
+    return 0;
+}
