@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int X, Y, H;
+    if (scanf("%d %d %d", &X, &Y, &H) != 3) {
+        // Handle input error, although constraints suggest valid input
+        return 1;
+    }
+
+    int total_charge;
+
+    // The charge calculation logic:
+    if (H <= 1) {
+        // Case 1: If parking time is 1 hour or less, pay only the first-hour charge (X).
+        total_charge = X;
+    } else {
+        // Case 2: If parking time is greater than 1 hour.
+        
+        // 1. Charge for the first hour: X
+        // 2. Charge for the remaining hours: (H - 1) * Y
+        
+        int extra_hours = H - 1;
+        int extra_charge = extra_hours * Y;
+        
+        total_charge = X + extra_charge;
+    }
+
+    // Output the total calculated charge
+    printf("%d\n", total_charge);
+
+    return 0;
+}
